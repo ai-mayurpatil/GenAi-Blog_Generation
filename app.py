@@ -29,6 +29,7 @@ def blog_generate_using_bedrock(blogtopic:str)-> str:
         print(f"Error generating the blog:{e}")
         return ""
 
+# Save blog details
 def save_blog_details_s3(s3_key,s3_bucket,generate_blog):
     s3=boto3.client('s3')
 
